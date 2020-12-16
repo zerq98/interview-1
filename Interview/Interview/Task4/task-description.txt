@@ -1,0 +1,11 @@
+﻿Zapoznaj się z kodem umieszczonym w tym folderze.
+
+0. Odkomentuj kod w plikach Logger i Tester4
+1. Stwórz interfejs ILogOutput
+2. Stwórz dwie implementacje tego interfejsu:
+- FileLogOutput - zapisującą log do pliku
+- ConsoleLogOutput - wyświetlającą log na konsoli
+Obie implementacje należy przetestować w metodzie Main
+3. Obecnie logi zapisywane są w formacie Json. Zmodyfikuj kod tak aby umożliwić alternatywny sposób formatowania wpisów logu. Powinny być dostępne formaty json oraz xml.
+Należy pamiętać, że biblioteka może być używana przez innych programistów, którzy nie będą mieli możliwości ingerowania w kod. Mimo to powinni mieć możliwość roszerzenia loggera o dodatkowe sposoby formatowania.
+   

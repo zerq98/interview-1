@@ -1,0 +1,24 @@
+﻿Zapoznaj się z klasami w tym katalogu.
+Uruchom program (metoda Test w klasie Tester). Zobacz jak działa - wpisz np. Poland.
+Program składa się z kilku elementów:
+- klasa Tester - główna klasa uruchamiająca
+- klasa CountriesRestApiClient - klient api ze strony https://rapidapi.com/apilayernet/api/rest-countries-v1 - jest to api, które można odpytywać o dane różnych państw, a klasa pełni funkcję klienta tego Api, pobiera odpowiedzi i deserializuje je do klasy CountryDto
+- klasa CountryDto - do tej klasy są deserializowane odpowiedzi zwracane z https://restcountries-v1.p.rapidapi.com
+- klasa ConsoleCountriesSearchReportWriter - klasa, której zadaniem jest wypisywanie raportu dotyczącego odnalezionych państwa na konsolę
+Zadania:
+0) Np. dla wyszukiwania poland, w raporcie wyświetla się:
+	- Poland ze stolica w Warsaw.
+		- ludnosc: 38.484 milionów
+		- powierzchnia: 312679 km^2
+	zmodyfikuj w taki sposób żeby raport wyglądał następująco:
+	- POLAND
+	    - stolica: Warsaw
+		- ludnosc: 38.484 milionów
+		- powierzchnia: 312679 km^2
+1) W raporcie wyświetla się tylko stolica, ludność i powierzchnia. Rozbuduj raport o długość i szerokość geograficzną.
+2) Rozbuduj raport o gęstość zaludnienia wyliczony na podstawie populacji i powierzchni
+3) Dane zwracane w responsie http z https://rapidapi.com/apilayernet/api/rest-countries-v1 zawierają taką informację: alpha3Code. Rozbuduj raport o tę informację.
+4) Wpisz w wyszukiwaniu niepełną nazwę państwa:
+	ger
+	Raport powinien zawierać 4 państwa: Algeria, Germany, Niger, Nigeria bo w nazwie jest ger, ale zawiera też Denmark i Norway. Na potrzeby tego zadania przyjmij, że to zachowanie jest niepożądane.
+	Sprawdź dlaczego tak się dzieje i napraw błąd.

@@ -1,0 +1,7 @@
+﻿Napisz program, który:
+1. wypełni 200 elementową tablicę losowymi liczbami z zakresu <0 - 100>,
+2. przepisze co trzecią liczbę z tablicy do listy generycznej w kolejności od końca do początku tablicy. Np. dla tablicy [1, 2, 3, 4, 5, 6, 7, 8] lista powinna zawierać elementy 8, 5, 2,
+3. przepisze wartości z tablicy do listy generycznej w taki sposób, że element w liście odpowiadający elementowi w tablicy będzie średnią arytmetyczną elementu z tablicy oraz jego sąsiadów - tj. elementu poprzedzającego i kolejnego. Uwaga - dla pierwszego elementu tablicy należy przyjąć, że poprzedza go element o wartości 50, a dla ostatniego należy przyjąć, że następuje po nim element o wartości 50.
+4. przepisze elementy tablicy większe od 90 do listy generycznej
+5. wymnoży elementy tablicy na zasadzie każdy z każdym (także z samym sobą) i wyświetli bez powtórzeń pary indeksów tych elementów, dla których iloczyn jest większy od 9000
+   np. dla tablicy [0, 91, 100] powinny zostać wyświetlone pary (1, 2), (2, 2)

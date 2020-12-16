@@ -1,0 +1,8 @@
+﻿Napisz program, który pozwoli wczytać dowolny plik tekstowy z dysku, a następnie policzy i wyświetli liczbę wystąpień każdego znaku - ilościowo i procentowo względem całego tekstu.
+Przykład:
+Aaabbbcdef
+A - 1 / 10%
+a - 2 / 20%
+b - 3 / 30%
+itd.
+Program powinien zapewnić możliwość sortowania wyniku alfabetycznie oraz ilościowo.

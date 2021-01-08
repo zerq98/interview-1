@@ -5,3 +5,19 @@
 4. przepisze elementy tablicy większe od 90 do listy generycznej
 5. wymnoży elementy tablicy na zasadzie każdy z każdym (także z samym sobą) i wyświetli bez powtórzeń pary indeksów tych elementów, dla których iloczyn jest większy od 9000
    np. dla tablicy [0, 91, 100] powinny zostać wyświetlone pary (1, 2), (2, 2)
+6. a) sprawdzi ile rosnących sekwencji 3 elementowych znajduje się w tablicy (elementy mogą być współdzielone pomiędzy sekwencjami - patrz przykład poniżej)
+   b) następnie dla każdej kolejnej pracy liczby z pierwotnej tablicy dokona zamiany tych liczb miejscami i sprawdzi tę samą właściwość, tj. sprawdzi ile rosnących sekwencji 3 elementowych znajduje się w tablicy
+   c) odpowie czy największa liczba rosnących sekwencji 3 elementowych znajduje się w tablicy oryginalnej czy w tablicy modyfikowanej, a jeżeli w tablicy modyfikowanej to, w wnyniku zamiany której pary liczb
+   Przykład:
+      
+      pierwotna tablica T0: [3, 2, 1, 2, 3, 4, 5, 5, 0]
+      sekwencje rosnące w T0: [1, 2, 3], [2, 3, 4], [3, 4, 5]
+      liczba sekwencji 3
+
+      tablica T1 z zamianą elementów 0 i 1 względem tablicy T0: [2, 3, 1, 2, 3, 4, 5, 5, 0]
+      sekwencje rosnące w T1: [1, 2, 3], [2, 3, 4], [3, 4, 5]
+      liczba sekwencji 3
+
+      tablica T2 z zamianą elementów 1 i 2 względem tablicy T0: [3, 1, 2, 2, 3, 4, 5, 5, 0]
+      sekwencje rosnące w T2: [2, 3, 4], [3, 4, 5]
+      liczba sekwencji 2

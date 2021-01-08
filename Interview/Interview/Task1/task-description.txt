@@ -1,23 +1,69 @@
 ﻿Napisz program, który:
+
 1. wypełni 200 elementową tablicę losowymi liczbami z zakresu <0 - 100>,
+
 2. przepisze co trzecią liczbę z tablicy do listy generycznej w kolejności od końca do początku tablicy. Np. dla tablicy [1, 2, 3, 4, 5, 6, 7, 8] lista powinna zawierać elementy 8, 5, 2,
-3. przepisze wartości z tablicy do listy generycznej w taki sposób, że element w liście odpowiadający elementowi w tablicy będzie średnią arytmetyczną elementu z tablicy oraz jego sąsiadów - tj. elementu poprzedzającego i kolejnego. Uwaga - dla pierwszego elementu tablicy należy przyjąć, że poprzedza go element o wartości 50, a dla ostatniego należy przyjąć, że następuje po nim element o wartości 50.
+
+3. przepisze wartości z tablicy do listy generycznej w taki sposób, że element w liście odpowiadający elementowi w tablicy będzie średnią arytmetyczną elementu z tablicy oraz jego bezpośrednich sąsiadów - tj. elementu poprzedzającego i kolejnego. Uwaga - dla pierwszego elementu tablicy należy przyjąć, że poprzedza go element o wartości 50, a dla ostatniego należy przyjąć, że następuje po nim element o wartości 50.
+
 4. przepisze elementy tablicy większe od 90 do listy generycznej
+
 5. wymnoży elementy tablicy na zasadzie każdy z każdym (także z samym sobą) i wyświetli bez powtórzeń pary indeksów tych elementów, dla których iloczyn jest większy od 9000
    np. dla tablicy [0, 91, 100] powinny zostać wyświetlone pary (1, 2), (2, 2)
-6. a) sprawdzi ile rosnących sekwencji 3 elementowych znajduje się w tablicy (elementy mogą być współdzielone pomiędzy sekwencjami - patrz przykład poniżej)
-   b) następnie dla każdej kolejnej pracy liczby z pierwotnej tablicy dokona zamiany tych liczb miejscami i sprawdzi tę samą właściwość, tj. sprawdzi ile rosnących sekwencji 3 elementowych znajduje się w tablicy
-   c) odpowie czy największa liczba rosnących sekwencji 3 elementowych znajduje się w tablicy oryginalnej czy w tablicy modyfikowanej, a jeżeli w tablicy modyfikowanej to, w wnyniku zamiany której pary liczb
+
+6. sprawdzi ile rosnących sekwencji 3 elementowych znajduje się w tablicy (elementy mogą być współdzielone pomiędzy sekwencjami - patrz przykład poniżej)
+   powyższe sprawdzenie należy wykonać dla:
+   - pierwotnej tablicy
+   - tablic różniących się od tablicy pierwotnej tym, że miejscami zamienione są elementy o indeksach:
+     - 0 i 1
+     - 1 i 2
+     - 2 i 3
+     - itd.
+   odpowie czy największa liczba rosnących sekwencji 3 elementowych znajduje się w tablicy oryginalnej czy w tablicy modyfikowanej (z zamienioną parą liczb), a jeżeli w tablicy modyfikowanej to, w wnyniku zamiany której pary liczb
+
    Przykład:
       
-      pierwotna tablica T0: [3, 2, 1, 2, 3, 4, 5, 5, 0]
+      pierwotna tablica T0: [3, 2, 1, 2, 3, 4, 5, 0]
       sekwencje rosnące w T0: [1, 2, 3], [2, 3, 4], [3, 4, 5]
       liczba sekwencji 3
+      zamieniona para: brak
 
-      tablica T1 z zamianą elementów 0 i 1 względem tablicy T0: [2, 3, 1, 2, 3, 4, 5, 5, 0]
+      tablica T1 z zamianą elementów 0 i 1 względem tablicy T0: [2, 3, 1, 2, 3, 4, 5, 0]
       sekwencje rosnące w T1: [1, 2, 3], [2, 3, 4], [3, 4, 5]
       liczba sekwencji 3
+      zamieniona para: 0 i 1
 
-      tablica T2 z zamianą elementów 1 i 2 względem tablicy T0: [3, 1, 2, 2, 3, 4, 5, 5, 0]
+      tablica T2 z zamianą elementów 1 i 2 względem tablicy T0: [3, 1, 2, 2, 3, 4, 5, 0]
       sekwencje rosnące w T2: [2, 3, 4], [3, 4, 5]
       liczba sekwencji 2
+      zamieniona para: 1 i 2
+
+      tablica T3 z zamianą elementów 2 i 3 względem tablicy T0: [3, 2, 2, 1, 3, 4, 5, 0]
+      sekwencje rosnące w T3: [1, 3, 4], [3, 4, 5]
+      liczba sekwencji 2
+      zamieniona para: 2 i 3
+
+      tablica T4 z zamianą elementów 3 i 4 względem tablicy T0: [3, 2, 1, 3, 2, 4, 5, 0]
+      sekwencje rosnące w T4: [2, 4, 5]
+      liczba sekwencji 1
+      zamieniona para: 3 i 4
+
+      tablica T5 z zamianą elementów 4 i 5 względem tablicy T0: [3, 2, 1, 2, 4, 3, 5, 0]
+      sekwencje rosnące w T5: [1, 2, 4]
+      liczba sekwencji 1
+      zamieniona para: 4 i 5
+
+      tablica T6 z zamianą elementów 5 i 6 względem tablicy T0: [3, 2, 1, 2, 3, 5, 4, 0]
+      sekwencje rosnące w T6: [1, 2, 3], [2, 3, 5]
+      liczba sekwencji 2
+      zamieniona para: 5 i 6
+
+      tablica T7 z zamianą elementów 6 i 7 względem tablicy T0: [3, 2, 1, 2, 3, 4, 0, 5]
+      sekwencje rosnące w T7: [1, 2, 3], [2, 3, 4]
+      liczba sekwencji 2
+      zamieniona para: 6 i 7
+
+      Największa liczba sekwencji wynosi 3 i znajduje się w:
+      - tablicy oryginalnej
+      - tablicy z zamianą elementów 0 i 1
+

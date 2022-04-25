@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Interview.Task1
+namespace Task1
 {
     public class Task1Code
     {
@@ -22,9 +24,9 @@ namespace Interview.Task1
 
         private void DisplayGrowingElements()
         {
-            for(int i = 0; i < tab.Length; i++)
+            for (int i = 0; i < tab.Length; i++)
             {
-                int[] modifiedTab=new int[tab.Length];
+                int[] modifiedTab = new int[tab.Length];
                 var growingSequences = new List<int[]>();
                 tab.CopyTo(modifiedTab, 0);
                 if (i > 0)
@@ -34,9 +36,9 @@ namespace Interview.Task1
                     modifiedTab[i - 1] = temp;
                 }
 
-                for(int j = 0; j < modifiedTab.Length-2; j++)
+                for (int j = 0; j < modifiedTab.Length - 2; j++)
                 {
-                    if(modifiedTab[j]<modifiedTab[j+1] && modifiedTab[j + 1] < modifiedTab[j + 2])
+                    if (modifiedTab[j] < modifiedTab[j + 1] && modifiedTab[j + 1] < modifiedTab[j + 2])
                     {
                         growingSequences.Add(new int[] { modifiedTab[j], modifiedTab[j + 1], modifiedTab[j + 2] });
                     }
@@ -45,7 +47,7 @@ namespace Interview.Task1
             }
         }
 
-        private void DisplayGrowingElementsInfo(int tabNumber,int[] tab,List<int[]> growingSequences)
+        private void DisplayGrowingElementsInfo(int tabNumber, int[] tab, List<int[]> growingSequences)
         {
             if (tabNumber == 0)
             {
@@ -53,7 +55,7 @@ namespace Interview.Task1
             }
             else
             {
-                DisplayInfo($"tablica T{tabNumber} z zmianą elementów {tabNumber-1} i {tabNumber} względem tablicy T0", tab);
+                DisplayInfo($"tablica T{tabNumber} z zmianą elementów {tabNumber - 1} i {tabNumber} względem tablicy T0", tab);
             }
 
             DisplayInfo($"sekwencje rosnące w T{tabNumber}", growingSequences);
@@ -89,7 +91,7 @@ namespace Interview.Task1
             averages = new List<int>();
             moreThan90 = new List<int>();
 
-            for(int i = 199; i >= 0; i -= 3)
+            for (int i = 199; i >= 0; i -= 3)
             {
                 thirdSelection.Add(tab[i]);
             }
@@ -100,7 +102,7 @@ namespace Interview.Task1
             {
                 averages.Add((tab[i - 1] + tab[i] + tab[i + 1]) / 3);
             }
-            averages.Add((50 + tab[tab.Length-2] + tab[tab.Length-1]) / 3);
+            averages.Add((50 + tab[tab.Length - 2] + tab[tab.Length - 1]) / 3);
             DisplayInfo("Lista ze średnimi", averages);
 
             for (int i = 0; i < 200; i++)
@@ -126,10 +128,10 @@ namespace Interview.Task1
             DisplayInfo("Pierwotna tablica", tab);
         }
 
-        private void DisplayInfo(string collectionName,int[] collection)
+        private void DisplayInfo(string collectionName, int[] collection)
         {
             string display = $"{collectionName}: [";
-            foreach(int element in collection)
+            foreach (int element in collection)
             {
                 display += $"{element},";
             }
@@ -146,7 +148,7 @@ namespace Interview.Task1
             foreach (int[] element in collection)
             {
                 var seqDisplay = "[";
-                foreach(int innerElement in element)
+                foreach (int innerElement in element)
                 {
                     seqDisplay += $"{innerElement},";
                 }

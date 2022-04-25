@@ -2,6 +2,8 @@
 {
     public interface ILogger
     {
-        void Log(LogEntry logEntry);
+        void LogAsJson(LogEntry logEntry);
+        void LogAsXml(LogEntry logEntry);
+        void LogAsOtherFormat(string serializedLogEntry);
     }
 }

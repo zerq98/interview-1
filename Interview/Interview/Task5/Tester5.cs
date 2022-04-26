@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Interview.Task5
@@ -23,7 +24,7 @@ namespace Interview.Task5
 
                 var countries = await _apiClient.GetCountries(searchText);
 
-                _countriesSearchReportWriter.Write(countries);
+                _countriesSearchReportWriter.Write(countries.Where(x=>x.Name.Contains(searchText)).ToArray());
             }
             catch (Exception ex)
             {

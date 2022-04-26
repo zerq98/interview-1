@@ -25,5 +25,7 @@ namespace Interview.Task5
 
         [DataMember(Name = "currencies")]
         public string[] Currencies { get; set; }
+        [DataMember(Name ="alpha3Code")]
+        public string Alpha3Code { get; set; }
     }
 }

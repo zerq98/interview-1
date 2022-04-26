@@ -9,15 +9,15 @@ namespace Interview
     {
         static async Task Main(string[] args)
         {
-            //Console.WriteLine("start");
+            Console.WriteLine("start");
 
-            //var tester = new Tester5();
-            //await tester.Test();
+            var tester = new Tester5();
+            await tester.Test();
 
-            //Console.WriteLine("stop");
+            Console.WriteLine("stop");
 
-            var tester = new Tester4();
-            tester.Test();
+            //var tester = new Tester4();
+            //tester.Test();
             Console.ReadKey();
 
         }
